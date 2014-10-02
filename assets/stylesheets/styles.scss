@@ -30,6 +30,8 @@ body {
 /* ===== Sass ===== */
 
 
+
+
 /* ===== HEADERS ===== */
 
 header {
@@ -56,7 +58,7 @@ header {
 
 /* ===== MAIN-SECTIONS ===== */
 
-#task-form {
+.task {
   float: left;
   margin-top: 50px;
   padding: 0.5em;
@@ -64,15 +66,14 @@ header {
   width: calc(100% - 300px);
 }
 
-p {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  background: white;
-  overflow: hidden;
-  @extend .lists
+.task-input {
+  margin: 0.5em;
+  padding: 1em;
+  border: none;
+  width: calc(100% - 1.5em);
+  height: 3em;
+  border-radius: 01em;
 }
-
-
 
 /* ===== SIDEBARS ===== */
 

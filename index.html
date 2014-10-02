@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ToDo-List-App</title>
+    <script src="assets/js/jquery-1.11.1.min.js"></script>
     <link rel="stylesheet" href="assets/stylesheets/reset.css">
     <link rel="stylesheet" href="assets/stylesheets/styles.css">
     <link rel="stylesheet" href="assets/stylesheets/mobile.css">
@@ -24,50 +25,36 @@
 
         <section id="task-form" class="page-section clearfix">
 
-            <form><input type="text" placeholder="Do This ... or Die" required></form>
-
-            <div class="uncompleted-task">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-            </div>
-
-            <h3>15 Completed</h3>
-
-            <div class="completed-task">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-            </div>
+            <form class="task">
+              <div>
+                <input class="task-input" type="text" placeholder="Do This...or Die">
+              </div>
+              <ul class="task-list">
+              </ul>
+            </form>
 
         </section>
 
 
         <section id="sidebar" class="page-section">
-
-          <div class="lists clearfix">
-          <h1 class="text">List 1</h1>
-          <h2 class="number">13</h2>
+          <div>
+            <span class="add-list">&plus;</span>
           </div>
+          <ul class="list-list"></ul>
 
-          <div class="lists clearfix">
-          <h1 class="text">List 1</h1>
-          <h2 class="number">13</h2>
-          </div>
-
-          <div class="lists clearfix">
-          <h1 class="text">List 1</h1>
-          <h2 class="number">13</h2>
-          </div>
-
-          <div class="add-list">
-            <span>Add Bucket List</span>
-          </div>
+          <form class="list">
+            <div>
+              <input class="list-input" type="text" placeholder="Do This...or Die">
+            </div>
+            <ul class="made-list">
+            </ul>
+          </form>
 
         </section>
 
       </main>
 
     </div>
+  <script src="assets/js/script.js"></script>
   </body>
 </html>
