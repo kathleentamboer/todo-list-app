@@ -90,13 +90,14 @@ input {
   padding: 1em;
   font-size: 1em;
   margin: 0.75em;
-  background: white;
+  background: #FF7064;
   border-radius: 0.5em;
+  color: white;
 }
 
 #lists > li:hover {
   font-weight: bold;
-  color: black;
+  color: #0b4652;
 }
 
 span {
