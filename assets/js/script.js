@@ -1,55 +1,36 @@
-$(document).ready(function() {
+$(document).ready(function(event){
 
-  // ADD TASK
+  // On submit of list new form
+  $("#list-new").on("submit", function(event){
+    event.preventDefault();
 
-  $('#task-form').submit(function () {
-      if ($('.task-input').val() !== '') {
-          var input_value = $('.task-input').val();
-          $('.task-list').append('<li>' + input_value + '<a href class="task-remove">x</a></li>');
-          //$('ul').append('<li>' + input_value '<a href="">x</a></li>');
+    var $form = $(this);
+    var $input = $form.find("input");
+    var listName = $input.val();
 
-      };
-      $('.task-input').val('');
-      return false;
+    // 1. Inject li into bottom of #lists
+    var liHtml = "<li>" + listName + "<span>&times;</span></li>";
+    $("#lists").append(liHtml);
+
+    // 3. Clear out input
+    $input.val("");
+    $form[0].reset();
+    event.currentTarget.reset();
+
+  // On click on li in #lists
+  $("#lists").on("click", "li", function(event){
+    event.preventDefault();
+
+    var $target = $(event.target);
+    var $li = $(event.currentTarget);
+
+    if($target.is("span")) {
+      // If someone clicked the x span do this
+
+      // 2. Remove li in #lists that was clicked on
+      $li.remove();
+
+    }
   });
-
-  // DELETE TASK
-
-  $(document).on('click', '.task-remove', function (e) {
-      e.preventDefault();
-      $(this).parent().remove();
   });
-
-
-
-    // ADD LIST
-
-    $('#sidebar').ready(function () {
-      $('.list').hide();
-    });
-
-    $('#sidebar').on('click', '.add-list', function () {
-      $('.list').show();
-    });
-
-
-    $('#sidebar').submit(function () {
-        if ($('.task-input').val() !== '') {
-            var input_value = $('.task-input').val();
-            $('.list-list').append('<li>' + input_value + '</li>');
-        };
-        $('.task-input').val('');
-        return false;
-
-    });
-
-
-    // DELETE LIST
-    // $('.sidebar').on('click', '.remove-task', function () {
-    //   $(this).parent('li').remove();
-    //   });
-    // });
-
-
-
 });

@@ -1,13 +1,14 @@
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ToDo-List-App</title>
-    <script src="assets/js/jquery-1.11.1.min.js"></script>
     <link rel="stylesheet" href="assets/stylesheets/reset.css">
     <link rel="stylesheet" href="assets/stylesheets/styles.css">
     <link rel="stylesheet" href="assets/stylesheets/mobile.css">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
@@ -15,46 +16,22 @@
 
       <header class="site-header">
         <h1 class="site-title clearfix">The Bucket List</h1>
-        <nav class="site-nav">
-          <img src="assets/images/#" alt="Settings">
-          <img src="assets/images/#" alt="Log Out">
-        </nav>
       </header>
 
       <main class="site-main">
 
-        <section id="task-form" class="page-section clearfix">
-
-            <form class="task">
-              <div class="top-task-input">
-                <input class="task-input" type="text" placeholder="Add to the List...">
-              </div>
-              <ul class="task-list">
-              </ul>
-            </form>
-
-        </section>
-
-
-        <section id="sidebar" class="page-section">
-          <div>
-            <span class="add-list">&plus;</span>
-          </div>
-
-          <form class="list">
-            <div>
-              <input class="task-input" type="text" placeholder="Add Bucket...">
-            <a href class="list-remove">X</a>
-            </div>
-            <ul class="list-list">
-            </ul>
+        <section id="sidebar">
+          <form id="list-new">
+            <label>
+              <input type="text" placeholder="Before I want to die I want to..." value="">
+            </label>
           </form>
-
+          <ul id="lists"></ul>
         </section>
 
       </main>
-
     </div>
+  <script src="assets/js/jquery-1.11.1.min.js"></script>
   <script src="assets/js/script.js"></script>
   </body>
 </html>
