@@ -13,9 +13,9 @@ $(document).ready(function(event){
     $("#lists").append(liHtml);
 
     // 3. Clear out input
-    $input.val("");
+    // $input.val("");
     $form[0].reset();
-    event.currentTarget.reset();
+    // event.currentTarget.reset();
 
   // On click on li in #lists
   $("#lists").on("click", "li", function(event){
